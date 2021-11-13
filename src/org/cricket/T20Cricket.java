@@ -8,11 +8,12 @@ public class T20Cricket {
 	public static void main(String[] args) {
 
 		Match match = new Match(t1, t2);
-		Toss ts = new Toss();
-		String tossResult = ts.getOutcome(t2, t1);
+		Toss objToss = new Toss();
+		String tossResult = objToss.getOutcome(t2, t1);
 		System.out.println(tossResult);
 
-		String batFirst = ts.getChose().equals("Bat") ? ts.getWinner() : ((t1).equals(ts.getWinner()) ? t2 : t1);
+		String batFirst = objToss.getChose().equals("Bat") ? objToss.getWinner()
+				: ((t1).equals(objToss.getWinner()) ? t2 : t1);
 		String batSecond = t1.equals(batFirst) ? t2 : t1;
 
 		int overs = match.getOvers();
