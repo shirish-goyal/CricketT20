@@ -13,10 +13,10 @@ public class Toss {
 		@SuppressWarnings("resource")
 		Scanner scn = new Scanner(System.in);
 		System.out.println(callingTeam + " Enter your choice(H/T):");
-		String str = "";
+		String userCall = "";
 		while (true) {
-			str = scn.next();
-			if (str.equalsIgnoreCase("H") || str.equalsIgnoreCase("T")) {
+			userCall = scn.next();
+			if (userCall.equalsIgnoreCase("H") || userCall.equalsIgnoreCase("T")) {
 				break;
 			}
 			System.out.println("Enter a Valid Input");
@@ -25,7 +25,7 @@ public class Toss {
 		String n = flag ? "H" : "T";
 		String choose = flag ? "Bat" : "Bowl";
 		this.chose = choose;
-		if (n.equalsIgnoreCase(str)) {
+		if (n.equalsIgnoreCase(userCall)) {
 			this.winner = callingTeam;
 			return callingTeam + " won the toss and choose to " + choose + " first";
 		} else {
